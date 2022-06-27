@@ -70,7 +70,8 @@ function App() {
     };
     const handleLogin = () => {
         if (!isLogin) {
-            request("login", info);
+            // request("login", info);
+            window.userLoginAndRegister.login(userbean(info.userName,info.password));
             setIsLogin(true);
             noticeRef.current.innerText = "登录中。。。";
             const id = setTimeout(() => {
