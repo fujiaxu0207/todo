@@ -87,7 +87,7 @@ function App() {
     }   
     return (
         <div className="login-wrapper">
-            <div className="login-header">登录</div>
+            <div className="login-header">我的待办</div>
             <div className="login-input">
                 <input
                     type="text"
@@ -106,8 +106,8 @@ function App() {
                 />
             </div>
             <div className="login-btn">
-                <button onClick={handleLogin}>登录</button>
-                <button onClick={handleRegister}>注册</button>
+                <button onClick={handleLogin} className="btn">登录</button>
+                <button onClick={handleRegister} className="btn">注册</button>
             </div>
             <div className="notice" ref={noticeRef}></div>
         </div>
