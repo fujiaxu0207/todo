@@ -81,6 +81,10 @@ function App() {
             setTimerId(id);
         }
     };
+    const handleRegister = () => {
+        window.userLoginAndRegister.register(info.userName,info.password);
+        noticeRef.current.innerText = "注册中。。。";
+    }   
     return (
         <div className="login-wrapper">
             <div className="login-header">登录</div>
@@ -103,7 +107,7 @@ function App() {
             </div>
             <div className="login-btn">
                 <button onClick={handleLogin}>登录</button>
-                <button>注册</button>
+                <button onClick={handleRegister}>注册</button>
             </div>
             <div className="notice" ref={noticeRef}></div>
         </div>
